@@ -31,12 +31,11 @@ zstyle ':prezto:load' pmodule \
   'directory' \
   'spectrum' \
   'utility' \
-  'git' \
   'fs' \
   'completion' \
   'prompt'
 
-pmodload 'svn'
+pmodload 'svn' 'git'
 pmodload 'java' 'javascript' 'ruby'
 
 #
