@@ -1,0 +1,4 @@
+
+function add_to_path() { prepend_to_path "$@" }
+function prepend_to_path() { export PATH=$1:$PATH }
+

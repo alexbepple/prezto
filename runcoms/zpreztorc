@@ -36,6 +36,8 @@ zstyle ':prezto:load' pmodule \
   'completion' \
   'prompt'
 
+pmodload 'java'
+
 #
 # Git
 #
