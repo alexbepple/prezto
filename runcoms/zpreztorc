@@ -36,6 +36,7 @@ zstyle ':prezto:load' pmodule \
   'completion' \
   'prompt'
 
+pmodload 'svn'
 pmodload 'java' 'javascript' 'ruby'
 
 #
