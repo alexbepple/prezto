@@ -17,11 +17,11 @@ if [[ -s "$HOME/.rvm/scripts/rvm" ]]; then
 # Load manually installed rbenv into the shell session.
 elif [[ -s "$HOME/.rbenv/bin/rbenv" ]]; then
   path=("$HOME/.rbenv/bin" $path)
-  eval "$(rbenv init - --no-rehash zsh)"
+  source "${0:h}/rbenv.init.zsh"
 
 # Load package manager installed rbenv into the shell session.
 elif (( $+commands[rbenv] )); then
-  eval "$(rbenv init - --no-rehash zsh)"
+  source "${0:h}/rbenv.init.zsh"
 
 # Load package manager installed chruby into the shell session.
 elif (( $+commands[chruby-exec] )); then
