@@ -19,6 +19,8 @@ source "${0:h}/alias.zsh"
 
 
 alias gs='git status'
+alias ga='git add'
+alias gc='git commit'
 alias gac='git add -A :/ && git commit -v'
 alias gl='git log --oneline'
 alias gd='git diff'
