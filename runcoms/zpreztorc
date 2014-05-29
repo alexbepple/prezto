@@ -1,18 +1,4 @@
-#
-# Sets Prezto options.
-#
-# Authors:
-#   Sorin Ionescu <sorin.ionescu@gmail.com>
-#
 
-#
-# General
-#
-
-# Set case-sensitivity for completion, history lookup, etc.
-# zstyle ':prezto:*:*' case-sensitive 'yes'
-
-# Color output (auto set to 'no' on dumb terminals).
 zstyle ':prezto:*:*' color 'yes'
 
 # Set the Zsh modules to load (man zshmodules).
@@ -38,19 +24,6 @@ zstyle ':prezto:load' pmodule \
 pmodload 'svn' 'git'
 pmodload 'java' 'javascript' 'ruby'
 
-#
-# Git
-#
-
-# Ignore submodules when they are 'dirty', 'untracked', 'all', or 'none'.
-# zstyle ':prezto:module:git:status:ignore' submodules 'all'
-
-#
-# GNU Utility
-#
-
-# Set the command prefix on non-GNU systems.
-# zstyle ':prezto:module:gnu-utility' prefix 'g'
 
 #
 # History Substring Search
