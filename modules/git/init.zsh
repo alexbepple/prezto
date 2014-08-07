@@ -22,7 +22,7 @@ alias gs='git status'
 alias ga='git add'
 alias gac='git add -A :/ && git commit -v'
 alias gl='git log --oneline'
-alias gd='git diff'
+alias gd='git diff --histogram --word-diff=color'
 
 alias st='open -a sourcetree .'
 
