@@ -129,6 +129,7 @@ alias fix.open.with='/System/Library/Frameworks/CoreServices.framework/Versions/
 
 alias ag='ag --smart-case --hidden'
 
+alias mosh='mosh --server="LC_ALL=en_US.UTF-8 mosh-server"'
 
 # automatically update $PATH completion
 zstyle ":completion:*:commands" rehash 1
