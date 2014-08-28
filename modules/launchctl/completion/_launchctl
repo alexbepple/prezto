@@ -24,10 +24,12 @@ other_commands=(
     'help:show help'
 )
 
-_describe -t common_commands 'common commands' common_commands
-_describe -t env_commands 'commands for environment variables' env_commands
-_describe -t other_commands 'other commands' other_commands
+if (( CURRENT == 2 )); then
+    _describe -t common_commands 'common commands' common_commands
+    _describe -t env_commands 'commands for environment variables' env_commands
+    _describe -t other_commands 'other commands' other_commands
+fi
 
 _arguments \
-  '*:plist files:_files -g "*.plist"'
+    '*:plist files:_files -g "*.plist"'
 
