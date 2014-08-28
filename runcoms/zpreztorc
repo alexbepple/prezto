@@ -23,6 +23,7 @@ zstyle ':prezto:load' pmodule \
 
 pmodload 'svn' 'git'
 pmodload 'java' 'javascript' 'ruby' 'python'
+pmodload 'launchctl'
 
 
 #
