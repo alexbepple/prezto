@@ -118,7 +118,8 @@ alias o='open'
 
 export EDITOR=mvim
 vim_less="vim -u /usr/share/vim/vim73/macros/less.vim"
-alias less="$vim_less"
+alias L="$vim_less"
+export PAGER="$vim_less"
 export MANPAGER="col -b | $vim_less -c 'set ft=man nomod nolist' -"
 
 alias tree.without.garbage="tree -I '.git|.jhw-cache|.DS_Store|Icon*'"
