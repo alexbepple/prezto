@@ -57,6 +57,7 @@ alias po='popd'
 alias pu='pushd'
 alias type='type -a'
 
+########
 # ls
 if is-callable 'dircolors'; then
   # GNU Core Utilities
@@ -97,6 +98,11 @@ alias lx='ll -XB'        # Lists sorted by extension (GNU only).
 alias lk='ll -Sr'        # Lists sorted by size, largest last.
 alias lt='ll -tr'        # Lists sorted by date, most recent last.
 alias lu='lt -u'         # Lists sorted by date, most recent last, shows access time.
+
+alias ls='gls --color -U'
+alias tree.without.garbage="tree -I '.git|.jhw-cache|.DS_Store|Icon*'"
+alias tree.for.exchange.dropboxes="tree -I 'Icon*' --prune --noreport -N -F"
+
 
 # Mac OS X Everywhere
 if [[ "$OSTYPE" == darwin* ]]; then
@@ -142,6 +148,7 @@ fi
 
 # Serves a directory via HTTP.
 alias http-serve='python -m SimpleHTTPServer'
+alias serve.this='mongoose -hide_files_patterns ".DS_Store"'
 
 #
 # Functions
@@ -181,4 +188,21 @@ function find-exec {
 function psu {
   ps -U "${1:-$USER}" -o 'pid,%cpu,%mem,command' "${(@)argv[2,-1]}"
 }
+
+
+alias grep='grep -i'
+alias ag='ag --smart-case --hidden'
+
+alias o='open'
+
+export EDITOR=mvim
+vim_less="vim -u /usr/share/vim/vim73/macros/less.vim"
+alias L="$vim_less"
+export PAGER="$vim_less"
+export MANPAGER="col -b | $vim_less -c 'set ft=man nomod nolist' -"
+
+alias p4merge='/Applications/p4merge.app/Contents/Resources/launchp4merge'
+alias fix.open.with='/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -r -domain local -domain user;killall Finder;echo "Open With has been rebuilt, Finder will relaunch"'
+
+alias mosh='mosh --server="LC_ALL=en_US.UTF-8 mosh-server"'
 

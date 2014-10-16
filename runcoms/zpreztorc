@@ -111,28 +111,6 @@ zstyle ':prezto:module:prompt' theme 'alexbepple'
 
 add_to_path $HOME/local/bin
 
-alias ls='gls --color -U'
-alias grep='grep -i'
-alias o='open'
-
-
-export EDITOR=mvim
-vim_less="vim -u /usr/share/vim/vim73/macros/less.vim"
-alias L="$vim_less"
-export PAGER="$vim_less"
-export MANPAGER="col -b | $vim_less -c 'set ft=man nomod nolist' -"
-
-alias tree.without.garbage="tree -I '.git|.jhw-cache|.DS_Store|Icon*'"
-alias tree.for.exchange.dropboxes="tree -I 'Icon*' --prune --noreport -N -F"
-
-alias serve.this='mongoose -hide_files_patterns ".DS_Store"'
-alias p4merge='/Applications/p4merge.app/Contents/Resources/launchp4merge'
-alias fix.open.with='/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -r -domain local -domain user;killall Finder;echo "Open With has been rebuilt, Finder will relaunch"'
-
-alias ag='ag --smart-case --hidden'
-
-alias mosh='mosh --server="LC_ALL=en_US.UTF-8 mosh-server"'
-
 # automatically update $PATH completion
 zstyle ":completion:*:commands" rehash 1
 
