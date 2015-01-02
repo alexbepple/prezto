@@ -22,7 +22,8 @@ zstyle ':prezto:load' pmodule \
   'prompt'
 
 pmodload 'svn' 'git'
-pmodload 'java' 'javascript' 'ruby' 'python'
+pmodload 'java' 'gradle' 
+pmodload 'javascript' 'ruby' 'python'
 pmodload 'launchctl'
 
 
