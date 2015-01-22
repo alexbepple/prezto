@@ -69,9 +69,9 @@ if is-callable 'dircolors'; then
 
   if zstyle -t ':prezto:module:utility:ls' color; then
     if [[ -s "$HOME/.dir_colors" ]]; then
-      eval "$(dircolors "$HOME/.dir_colors")"
+      eval "$(dircolors --sh "$HOME/.dir_colors")"
     else
-      eval "$(dircolors)"
+      eval "$(dircolors --sh)"
     fi
 
     alias ls="$aliases[ls] --color=auto"
@@ -108,6 +108,14 @@ alias ls="$gnu_less --color -U"
 alias tree.without.garbage="tree -I '.git|.jhw-cache|.DS_Store|Icon*'"
 alias tree.for.exchange.dropboxes="tree -I 'Icon*' --prune --noreport -N -F"
 
+
+# Grep
+if zstyle -t ':prezto:module:utility:grep' color; then
+  export GREP_COLOR='37;45'           # BSD.
+  export GREP_COLORS="mt=$GREP_COLOR" # GNU.
+
+  alias grep="$aliases[grep] --color=auto"
+fi
 
 # Mac OS X Everywhere
 if [[ "$OSTYPE" == darwin* ]]; then
@@ -210,4 +218,3 @@ alias p4merge='/Applications/p4merge.app/Contents/Resources/launchp4merge'
 alias fix.open.with='/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -r -domain local -domain user;killall Finder;echo "Open With has been rebuilt, Finder will relaunch"'
 
 alias mosh='mosh --server="LC_ALL=en_US.UTF-8 mosh-server"'
-

@@ -27,6 +27,12 @@ pmodload 'javascript' 'ruby' 'python'
 pmodload 'launchctl'
 
 
+add_to_path $HOME/local/bin
+
+# automatically update $PATH completion
+zstyle ":completion:*:commands" rehash 1
+
+
 #
 # History Substring Search
 #
@@ -108,10 +114,5 @@ zstyle ':prezto:module:prompt' theme 'alexbepple'
 # Auto start a session when Zsh is launched in a SSH connection.
 # zstyle ':prezto:module:tmux:auto-start' remote 'yes'
 
-
-
-add_to_path $HOME/local/bin
-
-# automatically update $PATH completion
-zstyle ":completion:*:commands" rehash 1
-
+# Integrate with iTerm2.
+# zstyle ':prezto:module:tmux:iterm' integrate 'yes'
