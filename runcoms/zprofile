@@ -14,12 +14,6 @@ if [[ "$OSTYPE" == darwin* ]]; then
 fi
 
 #
-# Editors
-#
-
-export VISUAL='nano'
-
-#
 # Language
 #
 
