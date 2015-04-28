@@ -218,3 +218,5 @@ alias p4merge='/Applications/p4merge.app/Contents/Resources/launchp4merge'
 alias fix.open.with='/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -r -domain local -domain user;killall Finder;echo "Open With has been rebuilt, Finder will relaunch"'
 
 alias mosh='mosh --server="LC_ALL=en_US.UTF-8 mosh-server"'
+
+export PERU_CACHE=$HOME/.cache/peru
