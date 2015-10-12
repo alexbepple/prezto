@@ -220,3 +220,5 @@ alias fix.open.with='/System/Library/Frameworks/CoreServices.framework/Versions/
 alias mosh='mosh --server="LC_ALL=en_US.UTF-8 mosh-server"'
 
 export PERU_CACHE=$HOME/.cache/peru
+
+alias time_="gtime -f '\ncompleted in %e seconds'"
