@@ -6,3 +6,5 @@ source "${0:h}/follow.zsh"
 
 function mkcd () { mkdir -p "$@" && eval cd "\"\$$#\""; }
 
+alias bd='. bd -si'
+
