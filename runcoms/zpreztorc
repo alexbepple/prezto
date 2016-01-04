@@ -22,7 +22,7 @@ zstyle ':prezto:load' pmodule \
   'prompt'
 
 pmodload 'svn' 'git'
-pmodload 'java' 'gradle' 
+pmodload 'java' 'gradle' 'android'
 pmodload 'javascript' 'ruby' 'python'
 pmodload 'launchctl'
 
