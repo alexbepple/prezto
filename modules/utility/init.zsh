@@ -227,3 +227,12 @@ alias mosh='mosh --server="LC_ALL=en_US.UTF-8 mosh-server"'
 export PERU_CACHE=$HOME/.cache/peru
 
 alias time_="gtime -f '\ncompleted in %e seconds'"
+
+
+# opens in new window on current space, even if another VimR windows exists on another space
+function vr () { 
+    osascript -e 'on run (argv)
+        tell application "VimR" to openFilesInNewWindow (argv)
+        activate application "VimR"
+    end' $(greadlink -f "$1") 
+}
