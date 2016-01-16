@@ -29,8 +29,11 @@ pmodload 'launchctl'
 
 add_to_path $HOME/local/bin
 
+alias ff="friends --filename '$HOME/sediments/Dropbox (Personal)/friends.md'"
+
 # automatically update $PATH completion
 zstyle ":completion:*:commands" rehash 1
+
 
 
 #
@@ -116,3 +119,4 @@ zstyle ':prezto:module:prompt' theme 'alexbepple'
 
 # Integrate with iTerm2.
 # zstyle ':prezto:module:tmux:iterm' integrate 'yes'
+
